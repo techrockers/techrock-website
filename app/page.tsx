@@ -2,27 +2,27 @@ const products = [
   {
     name: "Platzhalter: Web App",
     kind: "In Bearbeitung",
-    teaser: "Ein eigenes Web-App-Produkt entsteht und wird hier bald vorgestellt.",
+    teaser: "Hier wird bald ein Projekt vorgestellt.",
     description:
-      "Diese Kachel ist ein Platzhalter für ein Produkt, das aktuell konzipiert und entwickelt wird. Sobald die Produktbasis steht, erscheinen hier echte Screenshots, ein präziser Teaser und ein konkreter Einblick in Nutzen, Funktionen und technische Umsetzung.",
+      "Die Seite befindet sich gerade noch in der Entstehung. Nähere Infos zu bestehenden Projekten folgen bald.",
     palette: "aurora",
     stats: ["Coming soon", "Web App", "Product Build"],
   },
   {
     name: "Platzhalter: Browser Extension",
     kind: "In Bearbeitung",
-    teaser: "Eine Browser Extension mit produktivem Fokus ist in Vorbereitung.",
+    teaser: "Hier wird bald ein Projekt vorgestellt.",
     description:
-      "TechRock arbeitet an Browser-Erweiterungen, die echte Alltagsprobleme im Web lösen. Die finalen Produktdaten werden ergänzt, sobald Berechtigungen, Kernfunktionen, Store-Auftritt und technische Basis belastbar definiert sind.",
+      "Die Seite befindet sich gerade noch in der Entstehung. Nähere Infos zu bestehenden Projekten folgen bald.",
     palette: "ridge",
     stats: ["Coming soon", "Extension", "Manifest V3"],
   },
   {
     name: "Platzhalter: Weiteres Produkt",
     kind: "In Bearbeitung",
-    teaser: "Weitere Produktideen werden validiert und schrittweise umgesetzt.",
+    teaser: "Hier wird bald ein Projekt vorgestellt.",
     description:
-      "Dieser Platz ist für ein weiteres TechRock-Produkt reserviert. Der Bereich wird mit echten Produktinformationen gefüllt, sobald Konzept, Prototyp und Roadmap weit genug sind, um sie nachvollziehbar zu präsentieren.",
+      "Die Seite befindet sich gerade noch in der Entstehung. Nähere Infos zu bestehenden Projekten folgen bald.",
     palette: "ice",
     stats: ["Coming soon", "Prototype", "Roadmap"],
   },
@@ -105,7 +105,7 @@ export default function Home() {
         <div>
           <p className="eyebrow">Entwicklung</p>
           <h2>
-            Von der Idee zum nutzbaren Produkt mit professionell-pragmatischer
+            Von der Idee zum Produkt mit professionell-pragmatischer
             Arbeitsweise und modernem Tech Stack.
           </h2>
         </div>
@@ -133,12 +133,11 @@ export default function Home() {
       <section className="section" id="produkte">
         <div className="section-heading">
           <p className="eyebrow">Portfolio in Vorbereitung</p>
-          <h2>Hier entstehen die Produktkacheln für echte TechRock-Produkte.</h2>
+          <h2>Produkte mit eigener Roadmap.</h2>
           <p>
-            Die Kacheln sind bewusst als Platzhalter angelegt. Sie zeigen schon
-            die spätere Struktur des Portfolio-Bereichs, werden aber erst nach
-            und nach mit realen Produktnamen, Screenshots, Teasern und
-            Detailinformationen befüllt.
+            Ein kompakter Einblick in Produktlinien für Web, Browser und
+            datengetriebene Arbeitsabläufe. Jede Karte enthält einen
+            Screenshot-Entwurf, einen kurzen Teaser und Details auf Klick.
           </p>
         </div>
 
@@ -190,11 +189,14 @@ export default function Home() {
           <p className="eyebrow">Kontakt</p>
           <h2>TechRock baut Softwareprodukte mit technischem Fundament.</h2>
         </div>
-        <p>
-          Der Fokus liegt auf eigenen Web Apps und Browser Extensions, von der
-          Produktidee über Architektur und Frontend bis zu Betrieb, Analyse und
-          Weiterentwicklung. Alles aus eine Hand.
-        </p>
+        <div>
+          <p className="eyebrow">Arbeitsweise</p>
+          <p>
+            Der Fokus liegt auf eigenen Web Apps und Browser Extensions, von der
+            Produktidee über Architektur und Frontend bis zu Betrieb, Analyse
+            und Weiterentwicklung. Alles aus eine Hand.
+          </p>
+        </div>
       </section>
 
       <footer className="footer">
