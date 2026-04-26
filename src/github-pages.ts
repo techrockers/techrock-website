@@ -3,6 +3,9 @@ export function getGitHubPagesBasePath() {
     process.env.GITHUB_REPOSITORY?.split("/") ?? [];
   const repositoryOwner =
     process.env.GITHUB_REPOSITORY_OWNER ?? repositoryOwnerFromSlug;
+  const hasCustomDomain =
+    Boolean(process.env.GITHUB_PAGES_CUSTOM_DOMAIN) ||
+    Boolean(process.env.NEXT_PUBLIC_SITE_DOMAIN);
   const isUserOrOrganizationPage =
     repositoryName.toLowerCase() ===
     `${repositoryOwner.toLowerCase()}.github.io`;
@@ -11,7 +14,7 @@ export function getGitHubPagesBasePath() {
     return "";
   }
 
-  if (!repositoryName || isUserOrOrganizationPage) {
+  if (!repositoryName || isUserOrOrganizationPage || hasCustomDomain) {
     return "";
   }
 

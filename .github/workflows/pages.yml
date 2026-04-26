@@ -31,6 +31,8 @@ jobs:
 
       - name: Build static site
         run: npm run build
+        env:
+          GITHUB_PAGES_CUSTOM_DOMAIN: ${{ vars.GH_PAGES_CUSTOM_DOMAIN }}
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v5
