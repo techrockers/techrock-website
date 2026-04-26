@@ -1,30 +1,30 @@
 const products = [
   {
-    name: "SignalDesk",
-    kind: "Web App",
-    teaser: "Produktivitätszentrale für fokussierte Entscheidungen in kleinen Teams.",
+    name: "Platzhalter: Web App",
+    kind: "In Bearbeitung",
+    teaser: "Ein eigenes Web-App-Produkt entsteht und wird hier bald vorgestellt.",
     description:
-      "SignalDesk bündelt Aufgaben, Marktimpulse und KI-gestützte Zusammenfassungen in einer schlanken Oberfläche. Die App ist für wiederkehrende Arbeitsabläufe gebaut: kurze Wege, klare Statusmodelle und ein Datenmodell, das später ohne Reibung wachsen kann.",
+      "Diese Kachel ist ein Platzhalter für ein Produkt, das aktuell konzipiert und entwickelt wird. Sobald die Produktbasis steht, erscheinen hier echte Screenshots, ein präziser Teaser und ein konkreter Einblick in Nutzen, Funktionen und technische Umsetzung.",
     palette: "aurora",
-    stats: ["React", "Firebase", "AI Assist"],
+    stats: ["Coming soon", "Web App", "Product Build"],
   },
   {
-    name: "ExtensionOps",
-    kind: "Browser Extension",
-    teaser: "Werkzeugkasten für Recherche, Automatisierung und sichere Browser-Workflows.",
+    name: "Platzhalter: Browser Extension",
+    kind: "In Bearbeitung",
+    teaser: "Eine Browser Extension mit produktivem Fokus ist in Vorbereitung.",
     description:
-      "ExtensionOps zeigt, wie TechRock Browser-Erweiterungen als ernsthafte Produktplattform behandelt. Berechtigungen, Hintergrundprozesse, Content Scripts und Sync-Daten werden so strukturiert, dass Erweiterungen wartbar bleiben und im Alltag zuverlässig laufen.",
+      "TechRock arbeitet an Browser-Erweiterungen, die echte Alltagsprobleme im Web lösen. Die finalen Produktdaten werden ergänzt, sobald Berechtigungen, Kernfunktionen, Store-Auftritt und technische Basis belastbar definiert sind.",
     palette: "ridge",
-    stats: ["Manifest V3", "TypeScript", "Node"],
+    stats: ["Coming soon", "Extension", "Manifest V3"],
   },
   {
-    name: "LaunchBoard",
-    kind: "Web App",
-    teaser: "Dashboard für Produktstarts, Feedback-Zyklen und technische Roadmaps.",
+    name: "Platzhalter: Weiteres Produkt",
+    kind: "In Bearbeitung",
+    teaser: "Weitere Produktideen werden validiert und schrittweise umgesetzt.",
     description:
-      "LaunchBoard verbindet Roadmap, Nutzerfeedback und Release-Notizen in einem kompakten Produktcockpit. Der Fokus liegt auf nachvollziehbaren Entscheidungen und einer Architektur, die Frontend, Backend und KI-Funktionen sauber trennt.",
+      "Dieser Platz ist für ein weiteres TechRock-Produkt reserviert. Der Bereich wird mit echten Produktinformationen gefüllt, sobald Konzept, Prototyp und Roadmap weit genug sind, um sie nachvollziehbar zu präsentieren.",
     palette: "ice",
-    stats: ["Angular", "Node", "Analytics"],
+    stats: ["Coming soon", "Prototype", "Roadmap"],
   },
 ];
 
@@ -78,7 +78,7 @@ export default function Home() {
           </p>
           <div className="hero-actions">
             <a href="#produkte" className="button primary">
-              Portfolio ansehen
+              Produktplatzhalter ansehen
             </a>
             <a href="#entwicklung" className="button secondary">
               Arbeitsweise
@@ -132,12 +132,13 @@ export default function Home() {
 
       <section className="section" id="produkte">
         <div className="section-heading">
-          <p className="eyebrow">Portfolio</p>
-          <h2>Produkte mit eigener Roadmap.</h2>
+          <p className="eyebrow">Portfolio in Vorbereitung</p>
+          <h2>Hier entstehen die Produktkacheln für echte TechRock-Produkte.</h2>
           <p>
-            Ein kompakter Einblick in Produktlinien für Web, Browser und
-            datengetriebene Arbeitsabläufe. Jede Karte enthält einen
-            Screenshot-Entwurf, einen kurzen Teaser und Details auf Klick.
+            Die Kacheln sind bewusst als Platzhalter angelegt. Sie zeigen schon
+            die spätere Struktur des Portfolio-Bereichs, werden aber erst nach
+            und nach mit realen Produktnamen, Screenshots, Teasern und
+            Detailinformationen befüllt.
           </p>
         </div>
 
@@ -145,6 +146,7 @@ export default function Home() {
           {products.map((product) => (
             <article className="product-card" key={product.name}>
               <div className={`product-shot ${product.palette}`}>
+                <div className="work-badge">In Bearbeitung</div>
                 <div className="shot-bar">
                   <span />
                   <span />
@@ -174,7 +176,7 @@ export default function Home() {
                   ))}
                 </div>
                 <details>
-                  <summary>Mehr Details</summary>
+                  <summary>Warum Platzhalter?</summary>
                   <p>{product.description}</p>
                 </details>
               </div>

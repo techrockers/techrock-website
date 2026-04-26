@@ -310,9 +310,24 @@ p {
 }
 
 .product-shot {
+  position: relative;
   min-height: 15rem;
   padding: 1rem;
   background: linear-gradient(135deg, #173f4c, #5a96a6);
+}
+
+.work-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 2;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 999px;
+  padding: 0.42rem 0.68rem;
+  background: rgba(16, 25, 29, 0.78);
+  color: white;
+  font-size: 0.76rem;
+  font-weight: 900;
 }
 
 .product-shot.aurora {
