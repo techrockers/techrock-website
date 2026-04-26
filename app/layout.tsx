@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { withBasePath } from "../src/github-pages";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -6,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "TechRock entwickelt eigene Web Apps und Browser Extensions mit TypeScript, Node, React, Angular, Firebase und KI.",
   icons: {
-    icon: "/mountain.png",
+    icon: withBasePath("/mountain.png"),
   },
 };
 

@@ -38,4 +38,7 @@ coverage
 files
 
 # Do not publish unrelated repository automation from the workspace root
-.github
+.github/*
+!.github/workflows/
+.github/workflows/*
+!.github/workflows/pages.yml

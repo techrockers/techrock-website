@@ -1,3 +1,6 @@
+import Image from "next/image";
+import { withBasePath } from "../src/github-pages";
+
 const products = [
   {
     name: "Platzhalter: Web App",
@@ -57,8 +60,20 @@ export default function Home() {
     <main>
       <header className="site-header">
         <a className="brand" href="#top" aria-label="TechRock Startseite">
-          <img src="/mountain.png" alt="" className="brand-mark" />
-          <img src="/techrock.webp" alt="TechRock" className="brand-logo" />
+          <Image
+            src={withBasePath("/mountain.png")}
+            alt=""
+            width={200}
+            height={200}
+            className="brand-mark"
+          />
+          <Image
+            src={withBasePath("/techrock.webp")}
+            alt="TechRock"
+            width={256}
+            height={43}
+            className="brand-logo"
+          />
         </a>
         <nav className="nav" aria-label="Hauptnavigation">
           <a href="#produkte">Produkte</a>
@@ -88,7 +103,12 @@ export default function Home() {
 
         <div className="hero-visual" aria-hidden="true">
           <div className="mountain-shell">
-            <img src="/mountain.png" alt="" />
+            <Image
+              src={withBasePath("/mountain.png")}
+              alt=""
+              width={200}
+              height={200}
+            />
           </div>
           <div className="code-panel panel-one">
             <span>products.ts</span>
