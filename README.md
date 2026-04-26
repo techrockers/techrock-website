@@ -1,2 +1,2 @@
-# techrock-website
+# TechRock Website
 TechRock Presentation Website
