@@ -41,7 +41,7 @@ const stack = [
   "React",
   "Angular",
   "Firebase",
-  "AI",
+  "AI/KI",
   "Browser APIs",
   "Product Design",
   "CI/CD",
@@ -50,7 +50,6 @@ const stack = [
   "Next.js",
   "Responsive Design",
   "Cloud",
-  "KI",
 ];
 
 export default function Home() {
