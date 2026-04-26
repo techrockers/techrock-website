@@ -4,6 +4,7 @@ export function getGitHubPagesBasePath() {
   const repositoryOwner =
     process.env.GITHUB_REPOSITORY_OWNER ?? repositoryOwnerFromSlug;
   const hasCustomDomain =
+    Boolean(process.env.GH_PAGES_CUSTOM_DOMAIN) ||
     Boolean(process.env.GITHUB_PAGES_CUSTOM_DOMAIN) ||
     Boolean(process.env.NEXT_PUBLIC_SITE_DOMAIN);
   const isUserOrOrganizationPage =
