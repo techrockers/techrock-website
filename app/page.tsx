@@ -45,7 +45,7 @@ const stack = [
   "Browser APIs",
   "Product Design",
   "CI/CD",
-  "Github",
+  "GitHub",
   "HTML & CSS",
   "Next.js",
   "Responsive Design",
@@ -111,7 +111,7 @@ export default function Home() {
         </div>
         <div className="section-copy">
           <p>
-            TechRock kreiert aus Ideen funktonierende, moderne Produkte. Die
+            TechRock kreiert aus Ideen funktionierende, moderne Produkte. Die
             Arbeit beginnt bei einem stabilen
             technischen Kern und endet bei Oberflächen, die schnell verständlich,
             responsiv und langfristig wartbar sind.
