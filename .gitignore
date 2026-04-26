@@ -1,0 +1,41 @@
+# Dependencies
+node_modules
+
+# Next.js build output
+.next
+out
+
+# Environment and local secrets
+.env
+.env*.local
+.env.development
+.env.production
+.env.test
+
+# Local editor and OS files
+.DS_Store
+.idea
+.vscode/*.local.json
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Test and coverage output
+coverage
+.nyc_output
+
+# Hosting and tool caches
+.vercel
+.netlify
+.turbo
+
+# Local source/reference assets not needed for the public site build
+files
+
+# Do not publish unrelated repository automation from the workspace root
+.github
