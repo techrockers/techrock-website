@@ -1,0 +1,18 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Next.js: dev",
+      "type": "shell",
+      "command": "npm run dev",
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "Next.js: build static",
+      "type": "shell",
+      "command": "npm run build",
+      "problemMatcher": []
+    }
+  ]
+}

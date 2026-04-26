@@ -1,0 +1,205 @@
+const products = [
+  {
+    name: "SignalDesk",
+    kind: "Web App",
+    teaser: "Produktivitätszentrale für fokussierte Entscheidungen in kleinen Teams.",
+    description:
+      "SignalDesk bündelt Aufgaben, Marktimpulse und KI-gestützte Zusammenfassungen in einer schlanken Oberfläche. Die App ist für wiederkehrende Arbeitsabläufe gebaut: kurze Wege, klare Statusmodelle und ein Datenmodell, das später ohne Reibung wachsen kann.",
+    palette: "aurora",
+    stats: ["React", "Firebase", "AI Assist"],
+  },
+  {
+    name: "ExtensionOps",
+    kind: "Browser Extension",
+    teaser: "Werkzeugkasten für Recherche, Automatisierung und sichere Browser-Workflows.",
+    description:
+      "ExtensionOps zeigt, wie TechRock Browser-Erweiterungen als ernsthafte Produktplattform behandelt. Berechtigungen, Hintergrundprozesse, Content Scripts und Sync-Daten werden so strukturiert, dass Erweiterungen wartbar bleiben und im Alltag zuverlässig laufen.",
+    palette: "ridge",
+    stats: ["Manifest V3", "TypeScript", "Node"],
+  },
+  {
+    name: "LaunchBoard",
+    kind: "Web App",
+    teaser: "Dashboard für Produktstarts, Feedback-Zyklen und technische Roadmaps.",
+    description:
+      "LaunchBoard verbindet Roadmap, Nutzerfeedback und Release-Notizen in einem kompakten Produktcockpit. Der Fokus liegt auf nachvollziehbaren Entscheidungen und einer Architektur, die Frontend, Backend und KI-Funktionen sauber trennt.",
+    palette: "ice",
+    stats: ["Angular", "Node", "Analytics"],
+  },
+];
+
+const capabilities = [
+  "Eigene Produktanbieter, kein klassischer Dienstleister",
+  "Web Apps mit belastbaren Frontend- und Backend-Architekturen",
+  "Browser Extensions mit Manifest V3, sicheren Berechtigungen und Store-Readiness",
+  "KI-Funktionen, die Prozesse beschleunigen statt Oberflächen zu überladen",
+];
+
+const stack = [
+  "TypeScript",
+  "Node",
+  "React",
+  "Angular",
+  "Firebase",
+  "AI",
+  "Browser APIs",
+  "Product Design",
+  "CI/CD",
+  "Github",
+  "HTML & CSS",
+  "Next.js",
+  "Responsive Design",
+  "Cloud",
+  "KI",
+];
+
+export default function Home() {
+  return (
+    <main>
+      <header className="site-header">
+        <a className="brand" href="#top" aria-label="TechRock Startseite">
+          <img src="/mountain.png" alt="" className="brand-mark" />
+          <img src="/techrock.webp" alt="TechRock" className="brand-logo" />
+        </a>
+        <nav className="nav" aria-label="Hauptnavigation">
+          <a href="#produkte">Produkte</a>
+          <a href="#entwicklung">Entwicklung</a>
+          <a href="#kontakt">Kontakt</a>
+        </nav>
+      </header>
+
+      <section id="top" className="hero">
+        <div className="hero-copy">
+          <p className="eyebrow">Independent Product Studio</p>
+          <h1>Web App & Browser Extension Schmiede.</h1>
+          <p className="hero-text">
+            TechRock entwickelt eigene Softwareprodukte mit professioneller
+            Architektur, modernen Web-Stacks und pragmatisch eingesetzten
+            KI-Werkzeugen.
+          </p>
+          <div className="hero-actions">
+            <a href="#produkte" className="button primary">
+              Portfolio ansehen
+            </a>
+            <a href="#entwicklung" className="button secondary">
+              Arbeitsweise
+            </a>
+          </div>
+        </div>
+
+        <div className="hero-visual" aria-hidden="true">
+          <div className="mountain-shell">
+            <img src="/mountain.png" alt="" />
+          </div>
+          <div className="code-panel panel-one">
+            <span>products.ts</span>
+            <strong>buildOwnProducts()</strong>
+          </div>
+          <div className="code-panel panel-two">
+            <span>stack</span>
+            <strong>React / Angular + Firebase</strong>
+          </div>
+        </div>
+      </section>
+
+      <section className="section split" id="entwicklung">
+        <div>
+          <p className="eyebrow">Entwicklung</p>
+          <h2>
+            Von der Idee zum nutzbaren Produkt mit professionell-pragmatischer
+            Arbeitsweise und modernem Tech Stack.
+          </h2>
+        </div>
+        <div className="section-copy">
+          <p>
+            TechRock kreiert aus Ideen funktonierende, moderne Produkte. Die
+            Arbeit beginnt bei einem stabilen
+            technischen Kern und endet bei Oberflächen, die schnell verständlich,
+            responsiv und langfristig wartbar sind.
+          </p>
+          <ul className="capability-list">
+            {capabilities.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <section className="section stack-band" aria-label="Technologien">
+        {stack.map((item) => (
+          <span key={item}>{item}</span>
+        ))}
+      </section>
+
+      <section className="section" id="produkte">
+        <div className="section-heading">
+          <p className="eyebrow">Portfolio</p>
+          <h2>Produkte mit eigener Roadmap.</h2>
+          <p>
+            Ein kompakter Einblick in Produktlinien für Web, Browser und
+            datengetriebene Arbeitsabläufe. Jede Karte enthält einen
+            Screenshot-Entwurf, einen kurzen Teaser und Details auf Klick.
+          </p>
+        </div>
+
+        <div className="portfolio-grid">
+          {products.map((product) => (
+            <article className="product-card" key={product.name}>
+              <div className={`product-shot ${product.palette}`}>
+                <div className="shot-bar">
+                  <span />
+                  <span />
+                  <span />
+                </div>
+                <div className="shot-body">
+                  <div className="shot-sidebar" />
+                  <div className="shot-main">
+                    <div className="shot-line wide" />
+                    <div className="shot-line" />
+                    <div className="shot-chart">
+                      <span />
+                      <span />
+                      <span />
+                      <span />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="product-content">
+                <p className="product-kind">{product.kind}</p>
+                <h3>{product.name}</h3>
+                <p>{product.teaser}</p>
+                <div className="product-tags">
+                  {product.stats.map((stat) => (
+                    <span key={stat}>{stat}</span>
+                  ))}
+                </div>
+                <details>
+                  <summary>Mehr Details</summary>
+                  <p>{product.description}</p>
+                </details>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="section contact" id="kontakt">
+        <div>
+          <p className="eyebrow">Kontakt</p>
+          <h2>TechRock baut Softwareprodukte mit technischem Fundament.</h2>
+        </div>
+        <p>
+          Der Fokus liegt auf eigenen Web Apps und Browser Extensions, von der
+          Produktidee über Architektur und Frontend bis zu Betrieb, Analyse und
+          Weiterentwicklung. Alles aus eine Hand.
+        </p>
+      </section>
+
+      <footer className="footer">
+        <span>TechRock</span>
+        <span>Web Apps. Browser Extensions. Product Engineering.</span>
+      </footer>
+    </main>
+  );
+}
