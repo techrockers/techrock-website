@@ -1,6 +1,11 @@
 export function getGitHubPagesBasePath() {
-  const repositoryName = process.env.GITHUB_REPOSITORY?.split("/")[1] ?? "";
-  const isUserOrOrganizationPage = repositoryName.endsWith(".github.io");
+  const [repositoryOwnerFromSlug = "", repositoryName = ""] =
+    process.env.GITHUB_REPOSITORY?.split("/") ?? [];
+  const repositoryOwner =
+    process.env.GITHUB_REPOSITORY_OWNER ?? repositoryOwnerFromSlug;
+  const isUserOrOrganizationPage =
+    repositoryName.toLowerCase() ===
+    `${repositoryOwner.toLowerCase()}.github.io`;
 
   if (process.env.GITHUB_ACTIONS !== "true") {
     return "";
