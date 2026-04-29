@@ -248,6 +248,7 @@ export default function Home() {
                       href={product.url}
                       target="_blank"
                       rel="noopener noreferrer"
+                      aria-label={`${product.name} (oeffnet in neuem Tab)`}
                       className="product-title-link"
                     >
                       {product.name}
@@ -262,6 +263,7 @@ export default function Home() {
                     href={product.url}
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="App aufrufen (oeffnet in neuem Tab)"
                     className="product-cta-link"
                   >
                     App aufrufen <span aria-hidden="true">↗</span>
@@ -282,6 +284,7 @@ export default function Home() {
                       href={product.url}
                       target="_blank"
                       rel="noopener noreferrer"
+                      aria-label="App aufrufen (oeffnet in neuem Tab)"
                       className="product-cta-link"
                     >
                       App aufrufen <span aria-hidden="true">↗</span>
