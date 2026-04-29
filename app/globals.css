@@ -336,10 +336,6 @@ p {
   color: #ecfdf5;
 }
 
-.product-shot.aurora {
-  background: linear-gradient(135deg, #173f4c 0%, #5a96a6 60%, #d9edf0 100%);
-}
-
 .product-shot.ridge {
   background: linear-gradient(135deg, #10191d 0%, #2e4f5d 48%, #78adba 100%);
 }
