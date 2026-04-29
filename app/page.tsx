@@ -1,15 +1,40 @@
 import Image from "next/image";
 import { withBasePath } from "../src/github-pages";
 
-const products = [
+type Product = {
+  name: string;
+  kind: string;
+  teaser: string;
+  description: string;
+  stats: string[];
+  badge: string;
+  badgeTone?: string;
+  detailsLabel: string;
+  palette?: string;
+  shotClass?: string;
+  image?: `/${string}`;
+  imageAlt?: string;
+  imageWidth?: number;
+  imageHeight?: number;
+};
+
+const products: Product[] = [
   {
-    name: "Platzhalter: Web App",
-    kind: "In Bearbeitung",
-    teaser: "Hier wird bald ein Projekt vorgestellt.",
+    name: "Sag Mal Ehrlich",
+    kind: "Real Life Gesellschaftsspiel",
+    teaser:
+      "Unterhaltsame Real Life Gesellschafts-App für die etwas informativeren Abende mit Freunden, Familie und vor allem mit Leuten, die man noch nicht so gut kennt.",
     description:
-      "Die Seite befindet sich gerade noch in der Entstehung. Nähere Infos zu bestehenden Projekten folgen bald.",
-    palette: "aurora",
-    stats: ["Coming soon", "Web App", "Product Build"],
+      "Sag Mal Ehrlich ist eine unterhaltsame Gesellschafts-App für die etwas informativeren Abende mit Freunden, Familie und vor allem mit Leuten, die man noch nicht so gut kennt. Wählt aus verschiedenen Kategorien und stellt euch spannenden, witzigen oder tiefgründigen Fragen.\n\nOb als virtuelles Flaschendrehen mit einem jeweiligen Auserwählten oder als swipebare Karten an die ganze Runde – ihr habt die Wahl.",
+    image: "/mal-ehrlich.logo.png",
+    imageAlt: "Sag Mal Ehrlich",
+    imageWidth: 167,
+    imageHeight: 90,
+    shotClass: "mal-ehrlich-shot",
+    badge: "Online",
+    badgeTone: "online",
+    detailsLabel: "Details",
+    stats: ["Progressive Web App", "TypeScript", "React", "Next.js", "Firebase"],
   },
   {
     name: "Platzhalter: Browser Extension",
@@ -18,6 +43,8 @@ const products = [
     description:
       "Die Seite befindet sich gerade noch in der Entstehung. Nähere Infos zu bestehenden Projekten folgen bald.",
     palette: "ridge",
+    badge: "In Bearbeitung",
+    detailsLabel: "Warum Platzhalter?",
     stats: ["Coming soon", "Extension", "Manifest V3"],
   },
   {
@@ -27,6 +54,8 @@ const products = [
     description:
       "Die Seite befindet sich gerade noch in der Entstehung. Nähere Infos zu bestehenden Projekten folgen bald.",
     palette: "ice",
+    badge: "In Bearbeitung",
+    detailsLabel: "Warum Platzhalter?",
     stats: ["Coming soon", "Prototype", "Roadmap"],
   },
 ];
@@ -164,26 +193,50 @@ export default function Home() {
         <div className="portfolio-grid">
           {products.map((product) => (
             <article className="product-card" key={product.name}>
-              <div className={`product-shot ${product.palette}`}>
-                <div className="work-badge">In Bearbeitung</div>
-                <div className="shot-bar">
-                  <span />
-                  <span />
-                  <span />
+              <div
+                className={[
+                  "product-shot",
+                  product.palette,
+                  product.shotClass,
+                ]
+                  .filter(Boolean)
+                  .join(" ")}
+              >
+                <div className={`work-badge ${product.badgeTone ?? ""}`}>
+                  {product.badge}
                 </div>
-                <div className="shot-body">
-                  <div className="shot-sidebar" />
-                  <div className="shot-main">
-                    <div className="shot-line wide" />
-                    <div className="shot-line" />
-                    <div className="shot-chart">
-                      <span />
+                {product.image ? (
+                  <div className="product-logo-stage">
+                    <Image
+                      src={withBasePath(product.image)}
+                      alt={product.imageAlt ?? product.name}
+                      width={product.imageWidth ?? 167}
+                      height={product.imageHeight ?? 90}
+                      className="product-logo"
+                    />
+                  </div>
+                ) : (
+                  <>
+                    <div className="shot-bar">
                       <span />
                       <span />
                       <span />
                     </div>
-                  </div>
-                </div>
+                    <div className="shot-body">
+                      <div className="shot-sidebar" />
+                      <div className="shot-main">
+                        <div className="shot-line wide" />
+                        <div className="shot-line" />
+                        <div className="shot-chart">
+                          <span />
+                          <span />
+                          <span />
+                          <span />
+                        </div>
+                      </div>
+                    </div>
+                  </>
+                )}
               </div>
               <div className="product-content">
                 <p className="product-kind">{product.kind}</p>
@@ -195,8 +248,10 @@ export default function Home() {
                   ))}
                 </div>
                 <details>
-                  <summary>Warum Platzhalter?</summary>
-                  <p>{product.description}</p>
+                  <summary>{product.detailsLabel}</summary>
+                  {product.description.split("\n\n").map((paragraph) => (
+                    <p key={paragraph}>{paragraph}</p>
+                  ))}
                 </details>
               </div>
             </article>
