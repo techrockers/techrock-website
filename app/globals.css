@@ -330,8 +330,10 @@ p {
   font-weight: 900;
 }
 
-.product-shot.aurora {
-  background: linear-gradient(135deg, #173f4c 0%, #5a96a6 60%, #d9edf0 100%);
+.work-badge.online {
+  border-color: rgba(134, 239, 172, 0.72);
+  background: rgba(22, 101, 52, 0.92);
+  color: #ecfdf5;
 }
 
 .product-shot.ridge {
@@ -340,6 +342,24 @@ p {
 
 .product-shot.ice {
   background: linear-gradient(135deg, #2e4f5d 0%, #8bb9c2 58%, #f4fbfc 100%);
+}
+
+.product-shot.mal-ehrlich-shot {
+  display: grid;
+  place-items: center;
+  background: #1c1e24;
+}
+
+.product-logo-stage {
+  display: grid;
+  place-items: center;
+  min-height: 13rem;
+  width: 100%;
+}
+
+.product-logo {
+  width: min(11rem, 68%);
+  height: auto;
 }
 
 .shot-bar {
