@@ -455,6 +455,33 @@ p {
   text-transform: uppercase;
 }
 
+.product-title-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.product-title-link:hover,
+.product-title-link:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 0.14rem;
+}
+
+.product-cta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-bottom: 0.65rem;
+  color: var(--ridge);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.product-cta-link:hover,
+.product-cta-link:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 0.16rem;
+}
+
 .product-tags {
   display: flex;
   flex-wrap: wrap;

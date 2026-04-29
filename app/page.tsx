@@ -16,6 +16,7 @@ type Product = {
   imageAlt?: string;
   imageWidth?: number;
   imageHeight?: number;
+  url?: string;
 };
 
 const products: Product[] = [
@@ -31,6 +32,7 @@ const products: Product[] = [
     imageWidth: 167,
     imageHeight: 90,
     shotClass: "mal-ehrlich-shot",
+    url: "https://sag-mal-ehrlich.de",
     badge: "Online",
     badgeTone: "online",
     detailsLabel: "Details",
@@ -240,8 +242,33 @@ export default function Home() {
               </div>
               <div className="product-content">
                 <p className="product-kind">{product.kind}</p>
-                <h3>{product.name}</h3>
+                <h3>
+                  {product.url ? (
+                    <a
+                      href={product.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`${product.name} (oeffnet in neuem Tab)`}
+                      className="product-title-link"
+                    >
+                      {product.name}
+                    </a>
+                  ) : (
+                    product.name
+                  )}
+                </h3>
                 <p>{product.teaser}</p>
+                {product.url ? (
+                  <a
+                    href={product.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="App aufrufen (oeffnet in neuem Tab)"
+                    className="product-cta-link"
+                  >
+                    App aufrufen <span aria-hidden="true">↗</span>
+                  </a>
+                ) : null}
                 <div className="product-tags">
                   {product.stats.map((stat) => (
                     <span key={stat}>{stat}</span>
@@ -252,6 +279,17 @@ export default function Home() {
                   {product.description.split("\n\n").map((paragraph) => (
                     <p key={paragraph}>{paragraph}</p>
                   ))}
+                  {product.url ? (
+                    <a
+                      href={product.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="App aufrufen (oeffnet in neuem Tab)"
+                      className="product-cta-link"
+                    >
+                      App aufrufen <span aria-hidden="true">↗</span>
+                    </a>
+                  ) : null}
                 </details>
               </div>
             </article>
