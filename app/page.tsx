@@ -39,15 +39,22 @@ const products: Product[] = [
     stats: ["Progressive Web App", "TypeScript", "React", "Next.js", "Firebase"],
   },
   {
-    name: "Platzhalter: Browser Extension",
-    kind: "In Bearbeitung",
-    teaser: "Hier wird bald ein Projekt vorgestellt.",
+    name: "Decision Bandit",
+    kind: "Helfer für Real Life Entscheidungen",
+    teaser:
+      "Roll the Dice und Flip the Coin: Du musst dich zwischen mehreren Optionen entscheiden und hast du die Qual der Wahl? Dann lass Kollegen Zufall helfen und spare Energie für die wichtigen Entscheidungen.",
     description:
-      "Die Seite befindet sich gerade noch in der Entstehung. Nähere Infos zu bestehenden Projekten folgen bald.",
-    palette: "ridge",
-    badge: "In Bearbeitung",
-    detailsLabel: "Warum Platzhalter?",
-    stats: ["Coming soon", "Extension", "Manifest V3"],
+      "Schnelle Entscheidungsfindung per Zufall.  Einfach die zur Auswahl stehenden Möglichkeiten eintragen und rotieren lassen, bis dass der Zufall entscheidet. Nie wieder hin und her überlegen. Beispiele können in \"Vorlagen\" eingesehen, abgeguckt, gespeichert und angepasst werden.\n\nSo bleibt mehr Energie für die wichtigen Entscheidungen, die gut abgewogen werden sollten.",
+    image: "/bandit.lg.png",
+    imageAlt: "Decision Bandit",
+    imageWidth: 382,
+    imageHeight: 382,
+    shotClass: "decision-bandit-shot",
+    url: "https://decision-bandit.de",
+    badge: "Online",
+    badgeTone: "online",
+    detailsLabel: "Details",
+    stats: ["Progressive Web App", "Typescript", "Angular", "PrimeNG", "Firebase"],
   },
   {
     name: "Platzhalter: Weiteres Produkt",
@@ -285,7 +292,7 @@ export default function Home() {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="App aufrufen (oeffnet in neuem Tab)"
-                      className="product-cta-link"
+                      className="product-cta-link product-cta-link--details"
                     >
                       App aufrufen <span aria-hidden="true">↗</span>
                     </a>
