@@ -42,7 +42,7 @@ const products: Product[] = [
     name: "Decision Bandit",
     kind: "Helfer für Real Life Entscheidungen",
     teaser:
-      "Roll the Dice und Flip the Coin: Du musst dich zwischen mehreren Optionen entscheiden und hast du die Qual der Wahl? Dann lass Kollegen Zufall helfen und spare Energie für die wichtigen Entscheidungen.",
+      "Roll the Dice und Flip the Coin: Du musst dich zwischen mehreren Optionen entscheiden und hast du die Qual der Wahl? Dann lass Kollege Zufall helfen und spare Energie für die wichtigen Entscheidungen.",
     description:
       "Schnelle Entscheidungsfindung per Zufall.  Einfach die zur Auswahl stehenden Möglichkeiten eintragen und rotieren lassen, bis dass der Zufall entscheidet. Nie wieder hin und her überlegen. Beispiele können in \"Vorlagen\" eingesehen, abgeguckt, gespeichert und angepasst werden.\n\nSo bleibt mehr Energie für die wichtigen Entscheidungen, die gut abgewogen werden sollten.",
     image: "/bandit.lg.png",
@@ -54,7 +54,7 @@ const products: Product[] = [
     badge: "Online",
     badgeTone: "online",
     detailsLabel: "Details",
-    stats: ["Progressive Web App", "Typescript", "Angular", "PrimeNG", "Firebase"],
+    stats: ["Progressive Web App", "TypeScript", "Angular", "PrimeNG", "Firebase"],
   },
   {
     name: "Platzhalter: Weiteres Produkt",
@@ -269,7 +269,7 @@ export default function Home() {
                     href={product.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label="App aufrufen (oeffnet in neuem Tab)"
+                    aria-label={`${product.name} aufrufen (oeffnet in neuem Tab)`}
                     className="product-cta-link"
                   >
                     App aufrufen <span aria-hidden="true">↗</span>
@@ -290,7 +290,7 @@ export default function Home() {
                       href={product.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      aria-label="App aufrufen (oeffnet in neuem Tab)"
+                      aria-label={`${product.name} aufrufen (oeffnet in neuem Tab)`}
                       className="product-cta-link product-cta-link--details"
                     >
                       App aufrufen <span aria-hidden="true">↗</span>
