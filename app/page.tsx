@@ -131,7 +131,7 @@ export default function Home() {
           </p>
           <div className="hero-actions">
             <a href="#produkte" className="button primary">
-              Produktplatzhalter ansehen
+              Produkte
             </a>
             <a href="#entwicklung" className="button secondary">
               Arbeitsweise
@@ -190,12 +190,11 @@ export default function Home() {
 
       <section className="section" id="produkte">
         <div className="section-heading">
-          <p className="eyebrow">Portfolio in Vorbereitung</p>
+          <p className="eyebrow">Portfolio</p>
           <h2>Produkte mit eigener Roadmap.</h2>
           <p>
-            Ein kompakter Einblick in Produktlinien für Web, Browser und
-            datengetriebene Arbeitsabläufe. Jede Karte enthält einen
-            Screenshot-Entwurf, einen kurzen Teaser und Details auf Klick.
+            Ein kompakter Einblick in bisherige und laufende Produkte, mit
+            Verlinkung zur App selbst oder zu weiteren Informationen.
           </p>
         </div>
 
