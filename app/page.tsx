@@ -57,15 +57,22 @@ const products: Product[] = [
     stats: ["Progressive Web App", "TypeScript", "Angular", "PrimeNG", "Firebase"],
   },
   {
-    name: "Platzhalter: Weiteres Produkt",
-    kind: "In Bearbeitung",
-    teaser: "Hier wird bald ein Projekt vorgestellt.",
+    name: "Immo Organisator",
+    kind: "Browser Erweiterung",
+    teaser:
+      "Der Immo Organisator ist eine Browser App, die deine ImmoScout24-Suche direkt in der Plattform erweitert. Statt Notizen in externen Tools, Tabellen oder Chatverläufen zu verstreuen, legst du alle Infos direkt am Favoriten oder Expose ab.",
     description:
-      "Die Seite befindet sich gerade noch in der Entstehung. Nähere Infos zu bestehenden Projekten folgen bald.",
-    palette: "ice",
-    badge: "In Bearbeitung",
-    detailsLabel: "Warum Platzhalter?",
-    stats: ["Coming soon", "Prototype", "Roadmap"],
+      "Der Immo Organisator erweitert deine Immobiliensuche direkt in der Plattform: Du kannst Notizen an einzelne Objekte heften, Favoriten strukturiert gruppieren und per Status nachverfolgen, ob du eine Immobilie bereits kontaktiert oder besichtigt hast. Schlagworte und Highlights helfen dir, schneller zu priorisieren – ohne externe Tools oder Tabellenkalkulationen. Alle Daten bleiben lokal im Browser gespeichert. Die Extension ist verfügbar für Google Chrome, Mozilla Firefox und Microsoft Edge.",
+    image: "/immo-organisator.png",
+    imageAlt: "Immo Organisator",
+    imageWidth: 1024,
+    imageHeight: 1024,
+    shotClass: "immo-organisator-shot",
+    url: "https://www.immo-organisator.de",
+    badge: "Online",
+    badgeTone: "online",
+    detailsLabel: "Details",
+    stats: ["Browser Extension App", "TypeScript", "HTML", "CSS", "KI"],
   },
 ];
 
@@ -305,16 +312,26 @@ export default function Home() {
 
       <section className="section contact" id="kontakt">
         <div>
-          <p className="eyebrow">Kontakt</p>
-          <h2>TechRock baut Softwareprodukte mit technischem Fundament.</h2>
-        </div>
-        <div>
           <p className="eyebrow">Arbeitsweise</p>
+          <h2>TechRock baut Softwareprodukte mit technischem Fundament.</h2>
           <p>
             Der Fokus liegt auf eigenen Web Apps und Browser Extensions, von der
             Produktidee über Architektur und Frontend bis zu Betrieb, Analyse
             und Weiterentwicklung. Alles aus eine Hand.
           </p>
+        </div>
+        <div>
+          <p className="eyebrow">Kontakt</p>
+          <address>
+            <strong>TechRock</strong><br />
+            Fabian Marcus<br />
+            Theresienau 11<br />
+            53227 Bonn<br />
+            Deutschland<br />
+            <br />
+            <a href="tel:+491633060438">+49 163 3060438</a><br />
+            <a href="mailto:email@techrock.de">email@techrock.de</a>
+          </address>
         </div>
       </section>
 
