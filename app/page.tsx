@@ -36,7 +36,7 @@ const products: Product[] = [
     badge: "Online",
     badgeTone: "online",
     detailsLabel: "Details",
-    stats: ["Progressive Web App", "TypeScript", "React", "Next.js", "Firebase"],
+    stats: ["Web App", "TypeScript", "React", "Next.js", "Firebase"],
   },
   {
     name: "Decision Bandit",
@@ -54,11 +54,11 @@ const products: Product[] = [
     badge: "Online",
     badgeTone: "online",
     detailsLabel: "Details",
-    stats: ["Progressive Web App", "TypeScript", "Angular", "PrimeNG", "Firebase"],
+    stats: ["Web App", "TypeScript", "Angular", "PrimeNG", "Firebase"],
   },
   {
     name: "Immo Organisator",
-    kind: "Browser Erweiterung",
+    kind: "ImmoScout24 Steroids",
     teaser:
       "Der Immo Organisator ist eine Browser App, die deine ImmoScout24-Suche direkt in der Plattform erweitert. Statt Notizen in externen Tools, Tabellen oder Chatverläufen zu verstreuen, legst du alle Infos direkt am Favoriten oder Expose ab.",
     description:
@@ -72,7 +72,7 @@ const products: Product[] = [
     badge: "Online",
     badgeTone: "online",
     detailsLabel: "Details",
-    stats: ["Browser Extension App", "TypeScript", "HTML", "CSS", "KI"],
+    stats: ["Browser App", "TypeScript", "HTML", "CSS", "KI"],
   },
 ];
 
